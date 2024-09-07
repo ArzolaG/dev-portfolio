@@ -1,0 +1,57 @@
+---
+import { EXPERIENCE } from "../data/experience";
+import Button from "./Button.astro";
+---
+
+<section class="pl-10 border-l border-white/40 mt-10">
+    <div class="flex flex-col gap-12">
+        {
+            EXPERIENCE.map(({ id, position, company, dateStart, dateEnd, description, keywords, skills }) => {
+                return (
+                    <div class="p-10 bg-secondary/5 border-secondary/50 border rounded-xl relative">
+                        <div class="flex gap-3 items-center text-[22px] font-bold job-title before:bg-accent ">
+                            <span>{position}</span>
+                            <span class="size-[5px] bg-secondary/50 rounded-full" />
+                            <span class="text-primary">{company}</span>
+                        </div>
+                        <div class="text-white/50">
+                            {dateStart} - {dateEnd}
+                        </div>
+                        <ul class="flex flex-col gap-[25px] my-[25px] text-text">
+                            {description.map((desc) => {
+                                return <li>{desc}</li>;
+                            })}
+                        </ul>
+                        <div class="flex gap-[15px]">
+                            {skills.map(({ id, name }) => {
+                                return (
+                                    <div class="flex gap-[5px] border border-secondary/35 cursor-default select-none rounded-2xl px-3 py-1">
+                                        <img class="w-4" src={`/svg/${id}.svg`} alt={`${name} icon`} />
+                                        <span>{name}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                );
+            })
+        }
+    </div>
+    <div class="flex w-full gap-5 mt-12">
+        <Button content="Download Resume" url="#download" />
+        <img class="p-[10px] bg-primary/20 rounded-xl w-[52px]" src="/svg/linkedin.svg" alt="Linkedin Icon" />
+        <img class="p-[10px] bg-primary/20 rounded-xl w-[52px]" src="/svg/github.svg" alt="Github Icon" />
+    </div>
+</section>
+
+<style>
+    .job-title::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        border-radius: 50px;
+        position: absolute;
+        left: -50px;
+        display: block;
+    }
+</style>

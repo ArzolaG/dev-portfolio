@@ -1,18 +1,25 @@
 ---
 import Button from "../components/Button.astro";
-
-
 ---
+
 <section class="min-h-[90vh] flex justify-between items-center pl-[20%] overflow-hidden">
     <div class="w-3/5 flex flex-col gap-10 items-start">
         <h2 class="text-white text-4xl">Hi, my name is</h2>
         <h1 class="text-9xl font-bold text-primary">Luis Arzola</h1>
-        <p class="text-2xl">I'm a Full-Stack Engineer from Tijuana, México, with over 5 years of experience specializing in developing dynamic and responsive web applications.</p>
-        <Button content="Download Resume" url="#download"/>
+        <p class="text-2xl">
+            I'm a Full-Stack Engineer from Tijuana, México, with over 5 years of experience specializing in developing dynamic and
+            responsive web applications.
+        </p>
+        <div class="flex w-full gap-5">
+            <Button content="Download Resume" url="#download" />
+            <img class="p-[10px] bg-primary/20 rounded-xl w-[52px]" src="/svg/linkedin.svg" alt="Linkedin Icon" />
+            <img class="p-[10px] bg-primary/20 rounded-xl w-[52px]" src="/svg/github.svg" alt="Github Icon" />
+            <img class="p-[10px] bg-primary/20 rounded-xl w-[52px]" src="/svg/mail.svg" alt="Mail Icon" />
+        </div>
     </div>
-    <div class="w-2/5 flex flex-col  items-end relative right-[10%]">
-        <img class="w-[550px]" src="/svg/rectangle.svg" alt="Rectangle Figure">
-        <img class="w-[650px] h-[650px] mt-[-50%] relative right-[-35%]" src="/svg/circle.svg" alt="Circle Figure">
-        <img class="w-[570px] mt-[-45%]" src="/svg/triangle.svg" alt="Triangle Figure">
+    <div class="w-2/5 flex flex-col items-end relative right-[10%]">
+        <img class="w-[550px]" src="/svg/rectangle.svg" alt="Rectangle Figure" />
+        <img class="w-[650px] h-[650px] mt-[-50%] relative right-[-35%]" src="/svg/circle.svg" alt="Circle Figure" />
+        <img class="w-[570px] mt-[-45%]" src="/svg/triangle.svg" alt="Triangle Figure" />
     </div>
 </section>

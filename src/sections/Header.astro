@@ -1,17 +1,29 @@
 ---
 import Button from "../components/Button.astro";
-
-
 ---
 
 <header class="flex justify-between items-center px-[20%] py-11">
     <nav>
-        <ul class="flex gap-5">
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Contact</a></li>
+        <ul class="flex gap-10 text-xl">
+            <li><img src="/svg/experience.svg" alt="Experience Icon" /><a href="#">Experience</a></li>
+            <li><img src="/svg/projects.svg" alt="Projects Icon" /><a href="#">Projects</a></li>
+            <li><img src="/svg/skills.svg" alt="skills Icon" /><a href="#">Skills</a></li>
+            <li><img src="/svg/contact.svg" alt="Contact Icon" /><a href="#">Contact</a></li>
         </ul>
     </nav>
     <Button content="Download Resume" url="#" />
 </header>
+
+<style>
+    ul li {
+        display: flex;
+        gap: 5px;
+    }
+
+    ul li {
+        opacity: 0.6;
+    }
+    ul li:nth-child(1) {
+        opacity: 1;
+    }
+</style>

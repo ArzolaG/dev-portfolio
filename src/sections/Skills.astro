@@ -1,0 +1,25 @@
+---
+import { SKILLS } from "../data/skills";
+---
+
+<section class="w-[35%]">
+    <h2 class="text-right">Skills</h2>
+    <div class="grid gap-7 items-center justify-end mt-10">
+        {
+            SKILLS.map(({ id, name }) => {
+                return (
+                    <div class="p-3 pt-4 bg-secondary/5 border border-secondary/50 flex flex-col items-center gap-3 rounded-xl">
+                        <img class="w-[60px]" src={`/svg/${id}.svg`} alt={`${name} Icon`} />
+                        <span>{name}</span>
+                    </div>
+                );
+            })
+        }
+    </div>
+</section>
+
+<style>
+    .grid {
+        grid-template-columns: repeat(3, 120px);
+    }
+</style>

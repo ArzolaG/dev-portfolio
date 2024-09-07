@@ -1,35 +1,37 @@
 ---
-import '@fontsource-variable/roboto-mono';
-import Header from '../sections/Header.astro';
+import "@fontsource-variable/roboto-mono";
+import Header from "../sections/Header.astro";
 
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
-
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Luis Arzola Portfolio" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header/>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Luis Arzola Portfolio" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Header />
+        <slot />
+    </body>
 </html>
 <style is:global>
+    html {
+        background: #28232f;
+        font-family: "Roboto Mono Variable", monospace;
+        color: #fff;
+    }
 
-	html {
-		background: #28232F;
-		font-family: 'Roboto Mono Variable', monospace;
-		color: #fff;
-	}
-
+    h2 {
+        font-size: 64px;
+        font-weight: bold;
+    }
 </style>

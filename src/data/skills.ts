@@ -1,0 +1,52 @@
+import type {Skill} from "../types/Skill";
+
+export const SKILLS: Skill[] = [
+    {
+        id:"javascript",
+        name:"JavaScript",
+    },
+    {
+        id:"html",
+        name:"HTML"
+    },
+    {
+        id:"css",
+        name:"CSS"
+    },
+    {
+        id:"react",
+        name:"React"
+    },
+    {
+        id:"nodejs",
+        name:"Node.js"
+    },
+    {
+        id:"typescript",
+        name:"TypeScript"
+    },
+    {
+        id:"tailwind",
+        name:"Tailwind"
+    },
+    {
+        id:"mongodb",
+        name:"MongoDB"
+    },
+    {
+        id:"mysql",
+        name:"MySQL"
+    },
+    {
+        id:"php",
+        name:"php"
+    },
+    {
+        id:"csharp",
+        name:"C#"
+    },
+    {
+        id:"git",
+        name:"Git"
+    },
+]
