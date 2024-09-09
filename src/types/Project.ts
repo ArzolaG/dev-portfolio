@@ -11,7 +11,7 @@ export interface Project  {
     name:string;
     icon:string;
     links:Link[];
-    description:string;
+    description:string[];
     keywords:string[];
     skills:Skill[];
 }
