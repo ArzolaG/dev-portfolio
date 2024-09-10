@@ -7,15 +7,17 @@ import Education from "../sections/Education.astro";
 import Contact from "../sections/Contact.astro";
 import Footer from "../sections/Footer.astro";
 import Skills from "../sections/Skills.astro";
+import ExtraProjects from "../sections/ExtraProjects.astro";
 ---
 
 <Layout title="Luis Arzola | Full-Stack Engineer">
     <Hero />
-    <div class="flex justify-between sm:px-[10%] 2xl:px-[15%] gap-[100px] mt-10">
+    <div class="flex justify-between gap-[100px] mt-10 max-w-[1515px]">
         <Experience />
         <Skills />
     </div>
     <Projects />
+    <ExtraProjects />
     <Education />
     <Contact />
     <Footer />

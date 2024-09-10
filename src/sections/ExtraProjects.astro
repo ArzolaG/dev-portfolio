@@ -1,20 +1,19 @@
 ---
-import { PROJECTS } from "../data/projects";
+import { PROJECTS } from "../data/extraProjects";
 ---
 
-<section class="mt-20 max-w-[1515px]">
-    <h2>Projects</h2>
-    <div class="flex flex-col gap-16 relative mt-10">
+<section class="w-full max-w-[1515px] mt-20">
+    <h2>More Projects</h2>
+
+    <div class="grid grid-cols-3 gap-24 mt-10">
         {
-            PROJECTS.map(({ id, icon, name, links, description, keywords, skills }, index) => {
+            PROJECTS.map(({ id, icon, name, links, description, keywords, skills }) => {
                 return (
-                    <div class={`${index % 2 !== 0 ? "flex-row-reverse" : "flex-row"} flex items-center`}>
-                        <div
-                            class={`${index % 2 !== 0 ? "pl-[12%]" : "pr-[12%]"} w-3/5 p-[35px]  bg-secondary/5 rounded-xl border border-secondary/35 flex flex-col gap-6`}
-                        >
+                    <div class="bg-secondary/5 rounded-xl border border-secondary/35">
+                        <img class="w-full rounded-t-xl" src={`/img/${id}.webp`} alt={`${name} Thumbnail`} />
+                        <div class="p-4 flex flex-col gap-6">
                             <div class="flex gap-4 items-center">
-                                <img src={`/svg/${icon}.svg`} alt={`${icon} Icon`} />
-                                <span class="text-[32px] text-primary font-bold">{name}</span>
+                                <span class="text-2xl text-primary font-bold">{name}</span>
                                 <div class="flex gap-3">
                                     {links.map(({ id, name, url }) => {
                                         return (
@@ -40,9 +39,6 @@ import { PROJECTS } from "../data/projects";
                                     );
                                 })}
                             </div>
-                        </div>
-                        <div class={`${index % 2 !== 0 ? "left-0" : "right-0"} w-[50%] absolute`}>
-                            <img class="rounded-xl border border-secondary w-full" src={`/img/${id}.webp`} alt={`${name} Thumbnail`} />
                         </div>
                     </div>
                 );

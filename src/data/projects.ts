@@ -146,37 +146,5 @@ export const PROJECTS:Project[] =[
             }
         ]
     },
-    {
-        id:"3",
-        icon:"pokedex",
-        name:"Pokédex App",
-        links: [
-            {
-                id:"github",
-                name:"GitHub",
-                url:"test"
-            },
-            {
-                id:"open",
-                name:"Preview",
-                url:"test"
-            }
-        ],
-        description:["This Pokedex application is a sleek and responsive web app built with React and styled using SCSS. It leverages the PokeAPI to provide users with detailed information about various Pokémon, including their stats, abilities, and types. The app features an intuitive search function, allowing users to easily find and explore their favorite Pokémon. <br>With a clean and modern design, the Pokedex app offers a smooth user experience, making it a valuable tool for Pokémon enthusiasts. This project highlights my skills in front-end development, API integration, and responsive design."],
-        keywords:["React","SCSS","PokeAPI","front-end development, API integration, and responsive design."],
-        skills: [
-            {
-                id:"react",
-                name:"React"
-            },
-            {
-                id:"javascript",
-                name:"JavaScript"
-            },
-            {
-                id:"scss",
-                name:"SCSS"
-            },
-        ]
-    },
+
 ]
