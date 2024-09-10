@@ -94,7 +94,7 @@ export const PROJECTS:Project[] =[
             }
         ],
         description:['An elegant and user-friendly e-commerce site designed for a flower shop, offering a variety of floral arrangements. '],
-        keywords:["React","SCSS","PokeAPI","front-end development, API integration, and responsive design."],
+        keywords:["React","SASS","PokeAPI","front-end development, API integration, and responsive design."],
         skills: [
             {
                 id:"react",
@@ -106,7 +106,7 @@ export const PROJECTS:Project[] =[
             },
             {
                 id:"scss",
-                name:"SCSS"
+                name:"SASS"
             },
         ]
     },

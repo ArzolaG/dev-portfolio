@@ -18,16 +18,24 @@ export const SKILLS: Skill[] = [
         name:"React"
     },
     {
-        id:"nodejs",
-        name:"Node.js"
-    },
-    {
         id:"typescript",
         name:"TypeScript"
     },
     {
+        id:"nodejs",
+        name:"Node.js"
+    },
+    {
+        id:"express",
+        name:"Express.js"
+    },
+    {
         id:"tailwind",
         name:"Tailwind"
+    },
+    {
+        id:"sass",
+        name:"SASS"
     },
     {
         id:"mongodb",

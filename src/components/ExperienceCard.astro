@@ -17,15 +17,15 @@ import Button from "./Button.astro";
                         <div class="text-white/50">
                             {dateStart} - {dateEnd}
                         </div>
-                        <ul class="flex flex-col gap-[25px] my-[25px] text-text">
+                        <ul class="flex flex-col gap-[25px] my-[25px] text-text pl-8">
                             {description.map((desc) => {
                                 return <li>{desc}</li>;
                             })}
                         </ul>
-                        <div class="flex gap-[15px]">
+                        <div class="flex gap-[15px] flex-wrap">
                             {skills.map(({ id, name }) => {
                                 return (
-                                    <div class="flex gap-[5px] border border-secondary/35 cursor-default select-none rounded-2xl px-3 py-1 text-sm">
+                                    <div class="flex gap-[5px] border border-secondary/35 cursor-default select-none rounded-2xl px-[10px] py-1 text-sm">
                                         <img class="w-4" src={`/svg/${id}.svg`} alt={`${name} icon`} />
                                         <span>{name}</span>
                                     </div>
@@ -53,5 +53,20 @@ import Button from "./Button.astro";
         position: absolute;
         left: -50px;
         display: block;
+    }
+    ul li {
+        position: relative;
+    }
+    ul li::before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 8px;
+        /* transform: translate(-50%, -50%); */
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 10px solid #b47eff;
     }
 </style>

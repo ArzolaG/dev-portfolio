@@ -1,6 +1,6 @@
-<section class="mt-20 w-full max-w-[1515px]">
+<section>
     <h2>Education</h2>
-    <div class="flex gap-14">
+    <div class="flex gap-14 mt-10">
         <div class="w-1/2 flex flex-col p-10 bg-secondary/5 rounded-xl border border-secondary/50">
             <div class="flex justify-between">
                 <h4 class="text-[22px] font-bold">Instituto Tecnológico de Tijuana</h4>
@@ -8,7 +8,7 @@
             </div>
             <p class="text-primary">Bachelor of Computer System Engineering</p>
             <p class="text-xs text-white/50 my-6">Tijuana, Baja California, México</p>
-            <ul class="list-none flex flex-col gap-6">
+            <ul class="list-none flex flex-col gap-6 pl-8">
                 <li>Built and maintained code for various projects using C# and Object Oriented Programming.</li>
                 <li>Developed responsive and functional web applications using HTML, CSS, JavaScript, Node.js and MongoDB.</li>
             </ul>
@@ -20,7 +20,7 @@
             </div>
             <p class="text-primary">Programming Technician</p>
             <p class="text-xs text-white/50 my-6">Tijuana, Baja California, México</p>
-            <ul class="list-none flex flex-col gap-6">
+            <ul class="list-none flex flex-col gap-6 pl-8">
                 <li>Developed responsive web applications using HTML, CSS, PHP, and MySQL, focusing on dynamic and functional websites.</li>
                 <li>
                     Acquired a strong foundation in software development, learning C#, Object-Oriented Programming, Visual Basic, and
@@ -30,3 +30,21 @@
         </div>
     </div>
 </section>
+
+<style>
+    ul li {
+        position: relative;
+    }
+    ul li::before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 8px;
+        /* transform: translate(-50%, -50%); */
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 10px solid #b47eff;
+    }
+</style>
