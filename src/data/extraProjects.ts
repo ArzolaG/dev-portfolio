@@ -2,85 +2,45 @@ import type {Project} from "../types/Project"
 
 export const PROJECTS:Project[] =[
     {
-        id:"smite",
-        icon:"thunder",
-        name:"Smite Landing Page",
+        id:"bamboo",
+        icon:"bamboo",
+        name:"Bamboo Flower Shop",
         links: [
-            {
-                id:"github",
-                name:"GitHub",
-                url:"test"
-            },
-            {
-                id:"figmawhite",
-                name:"Figma",
-                url:"test"
-            },
             {
                 id:"open",
                 name:"Preview",
                 url:"test"
-            }
+            }   
         ],
         description:['An elegant and user-friendly e-commerce site designed for a flower shop, offering a variety of floral arrangements. '],
-        keywords:["Smite","Astro, HTML, TypeScript, and Tailwind CSS.", "interactive","responsive design", "smooth user experience."],
+        keywords:["e-commerce"],
         skills: [
             {
-                id:"astro",
-                name:"Astro"
-            },
-            {
-                id:"typescript",
-                name:"TypeScript"
-            },
-            {
-                id:"tailwind",
-                name:"tailwind"
-            },
-        ]
-    },
-    {
-        id:"worldcup",
-        icon:"world",
-        name:"World Cup 2022",
-        links: [
-            {
-                id:"github",
-                name:"GitHub",
-                url:"test"
-            },
-            {
-                id:"figmawhite",
-                name:"Figma",
-                url:"test"
-            },
-            {
-                id:"open",
-                name:"Preview",
-                url:"test"
-            }
-        ],
-        description:['An elegant and user-friendly e-commerce site designed for a flower shop, offering a variety of floral arrangements. '],
-        keywords:["React, HTML, CSS, and JavaScript", "interactive stats","front-end development"],
-        skills: [
-            {
-                id:"react",
-                name:"React"
-            },
-            {
-                id:"javascript",
-                name:"JavaScript"
+                id:"html",
+                name:"HTML"
             },
             {
                 id:"css",
                 name:"CSS"
             },
+            {
+                id:"javascript",
+                name:"JavaScript"
+            },
+            {
+                id:"php-v2",
+                name:"PHP"
+            },
+            {
+                id:"mysql",
+                name:"MySQL"
+            }
         ]
     },
     {
-        id:"pokedex",
-        icon:"pokedex",
-        name:"Pokédex App",
+        id:"skate",
+        icon:"skate",
+        name:"Skate Shop",
         links: [
             {
                 id:"github",
@@ -93,23 +53,49 @@ export const PROJECTS:Project[] =[
                 url:"test"
             }
         ],
-        description:['An elegant and user-friendly e-commerce site designed for a flower shop, offering a variety of floral arrangements. '],
-        keywords:["React","SASS","PokeAPI","front-end development, API integration, and responsive design."],
+        description:['A clean, minimal landing page for a skate shop, showcasing the latest products with easy navigation and a stylish design.'],
+        keywords:["skate"],
         skills: [
             {
-                id:"react",
-                name:"React"
+                id:"html",
+                name:"HTML"
             },
             {
-                id:"javascript",
-                name:"JavaScript"
-            },
-            {
-                id:"scss",
-                name:"SASS"
-            },
+                id:"css",
+                name:"CSS"
+            }
         ]
     },
+    {
+        id:"skate",
+        icon:"skate",
+        name:"Skate Shop",
+        links: [
+            {
+                id:"github",
+                name:"GitHub",
+                url:"test"
+            },
+            {
+                id:"open",
+                name:"Preview",
+                url:"test"
+            }
+        ],
+        description:['A clean, minimal landing page for a skate shop, showcasing the latest products with easy navigation and a stylish design.'],
+        keywords:["skate"],
+        skills: [
+            {
+                id:"html",
+                name:"HTML"
+            },
+            {
+                id:"css",
+                name:"CSS"
+            }
+        ]
+    },
+    
 
 
 ]

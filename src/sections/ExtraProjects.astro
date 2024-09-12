@@ -2,16 +2,16 @@
 import { PROJECTS } from "../data/extraProjects";
 ---
 
-<section>
+<section class="max-w-[1522px]">
     <h2>More Projects</h2>
 
-    <div class="grid grid-cols-3 gap-24 mt-10">
+    <div class="grid grid-cols-3 gap-[80px] mt-10">
         {
             PROJECTS.map(({ id, icon, name, links, description, keywords, skills }) => {
                 return (
                     <div class="bg-secondary/5 rounded-xl border border-secondary/35">
                         <img class="w-full rounded-t-xl" src={`/img/${id}.webp`} alt={`${name} Thumbnail`} />
-                        <div class="p-4 flex flex-col gap-6">
+                        <div class="p-[15px] flex flex-col gap-6">
                             <div class="flex gap-4 items-center">
                                 <span class="text-2xl text-primary font-bold">{name}</span>
                                 <div class="flex gap-3">
@@ -24,15 +24,15 @@ import { PROJECTS } from "../data/extraProjects";
                                     })}
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-6 leading-7 text-[#E2DAEE]">
+                            <div class="leading-6 text-[#E2DAEE]">
                                 {description.map((desc) => {
                                     return <p>{desc}</p>;
                                 })}
                             </div>
-                            <div class="flex gap-[15px] w-full">
+                            <div class="flex gap-[10px] w-full flex-wrap">
                                 {skills.map(({ id, name }) => {
                                     return (
-                                        <div class="flex gap-[5px] border border-secondary/35 cursor-default select-none rounded-2xl px-3 py-1 text-sm">
+                                        <div class="flex gap-[5px] border border-secondary/35 cursor-default select-none rounded-2xl px-[8px] py-[6px] text-xs">
                                             <img class="w-4" src={`/svg/${id}.svg`} alt={`${name} icon`} />
                                             <span>{name}</span>
                                         </div>

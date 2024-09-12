@@ -57,4 +57,8 @@ export const SKILLS: Skill[] = [
         id:"git",
         name:"Git"
     },
+    {
+        id:"responsive",
+        name:"Responsive"
+    }
 ]
