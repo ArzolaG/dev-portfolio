@@ -66,36 +66,5 @@ export const PROJECTS:Project[] =[
             }
         ]
     },
-    {
-        id:"skate",
-        icon:"skate",
-        name:"Skate Shop",
-        links: [
-            {
-                id:"github",
-                name:"GitHub",
-                url:"test"
-            },
-            {
-                id:"open",
-                name:"Preview",
-                url:"test"
-            }
-        ],
-        description:['A clean, minimal landing page for a skate shop, showcasing the latest products with easy navigation and a stylish design.'],
-        keywords:["skate"],
-        skills: [
-            {
-                id:"html",
-                name:"HTML"
-            },
-            {
-                id:"css",
-                name:"CSS"
-            }
-        ]
-    },
-    
-
 
 ]
