@@ -1,6 +1,17 @@
 ---
 import { EXPERIENCE } from "../data/experience";
 import Button from "./Button.astro";
+
+const highlightKeywords = (text: string, keywords: string[]): string => {
+    let highlightedText = text;
+
+    keywords.forEach((keyword) => {
+        const parts = highlightedText.split(keyword); // Divide el texto en partes
+        highlightedText = parts.join(`<span style="color:#b47eff;font-weight:bold;">${keyword}</span>`); // Une las partes resaltando la palabra clave
+    });
+
+    return highlightedText;
+};
 ---
 
 <section class="pl-10 border-l border-white/40 mt-10">
@@ -19,7 +30,7 @@ import Button from "./Button.astro";
                         </div>
                         <ul class="flex flex-col gap-[25px] my-[25px] text-text pl-8">
                             {description.map((desc) => {
-                                return <li>{desc}</li>;
+                                return <li set:html={highlightKeywords(desc, keywords)} />;
                             })}
                         </ul>
                         <div class="flex gap-[15px] flex-wrap">
@@ -68,5 +79,9 @@ import Button from "./Button.astro";
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         border-left: 10px solid #b47eff;
+    }
+    ul li span.highlight {
+        color: #b47eff;
+        font-weight: bold;
     }
 </style>

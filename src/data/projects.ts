@@ -122,7 +122,7 @@ export const PROJECTS:Project[] =[
             }
         ],
         description:['This e-commerce website was developed for a cosmetology company specializing in the sale of beauty products and cosmetology courses. Built with PHP, MySQL, CSS, and JavaScript, the site offers a seamless shopping experience, featuring an intuitive product catalog and a secure checkout process. The website also integrates PayPal for secure and convenient payment transactions. ','This project demonstrates my skills in back-end development, database management, payment gateway integration, and front-end design, ensuring both functionality and aesthetic appeal.'],
-        keywords:["React","SCSS","PokeAPI","front-end development, API integration, and responsive design."],
+        keywords:["PHP, MySQL, CSS, and JavaScript", "PayPal", "back-end", "database management", "payment gateway integration", "front-end"],
         skills: [
             {
                 id:"html",

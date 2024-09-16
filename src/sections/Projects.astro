@@ -1,5 +1,16 @@
 ---
 import { PROJECTS } from "../data/projects";
+
+const highlightKeywords = (text: string, keywords: string[]): string => {
+    let highlightedText = text;
+
+    keywords.forEach((keyword) => {
+        const parts = highlightedText.split(keyword); // Divide el texto en partes
+        highlightedText = parts.join(`<span style="color:#b47eff;font-weight:bold;">${keyword}</span>`); // Une las partes resaltando la palabra clave
+    });
+
+    return highlightedText;
+};
 ---
 
 <section>
@@ -27,7 +38,7 @@ import { PROJECTS } from "../data/projects";
                             </div>
                             <div class="flex flex-col gap-6 leading-7 text-[#E2DAEE]">
                                 {description.map((desc) => {
-                                    return <p>{desc}</p>;
+                                    return <p set:html={highlightKeywords(desc, keywords)} />;
                                 })}
                             </div>
                             <div class="flex gap-[15px] w-full">
