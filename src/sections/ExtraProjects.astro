@@ -5,7 +5,7 @@ import { PROJECTS } from "../data/extraProjects";
 <section class="max-w-[1522px]">
     <h2>More Projects</h2>
 
-    <div class="grid grid-cols-3 gap-[80px] mt-10">
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 xl:gap-[80px] mt-10">
         {
             PROJECTS.map(({ id, icon, name, links, description, keywords, skills }) => {
                 return (

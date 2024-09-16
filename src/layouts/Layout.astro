@@ -28,6 +28,7 @@ const { title } = Astro.props;
         background: #28232f;
         font-family: "Roboto Mono Variable", monospace;
         color: #fff;
+        scroll-behavior: smooth;
     }
 
     h2 {
@@ -45,6 +46,13 @@ const { title } = Astro.props;
         width: 100%;
         max-width: 1515px;
     }
+    #experience,
+    #contact,
+    #skills,
+    #projects,
+    #education {
+        scroll-margin-top: 100px;
+    }
 
     @media screen and (max-width: 1600px) {
         section {
@@ -54,7 +62,7 @@ const { title } = Astro.props;
             font-size: 52px;
         }
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1024px) {
         section {
             padding: 0 30px;
         }
