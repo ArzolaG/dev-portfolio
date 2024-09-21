@@ -14,26 +14,26 @@ const highlightKeywords = (text: string, keywords: string[]): string => {
 };
 ---
 
-<section class="pl-10 border-l border-white/40 mt-10">
+<section class="pl-5 sm:pl-8 md:pl-10 border-l border-white/20 mt-10 p-0">
     <div class="flex flex-col gap-12">
         {
             EXPERIENCE.map(({ id, position, company, dateStart, dateEnd, description, keywords, skills }) => {
                 return (
-                    <div class="p-10 bg-secondary/5 border-secondary/50 border rounded-xl relative">
-                        <div class="flex gap-3 items-center text-[22px] font-bold job-title before:bg-accent ">
+                    <div class="p-4 sm:p-5 md:p-10 bg-secondary/5 border-secondary/50 border rounded-xl relative shadow-lg">
+                        <div class="flex flex-col md:flex-row gap-1 md:gap-3 md:items-center text-lg md:text-[22px] font-bold job-title before:bg-accent mb-4">
                             <span>{position}</span>
-                            <span class="size-[5px] bg-secondary/50 rounded-full" />
+                            <span class="size-[5px] bg-secondary/50 rounded-full hidden md:flex" />
                             <span class="text-primary">{company}</span>
                         </div>
-                        <div class="text-white/50">
+                        <div class="text-white/50 text-sm md:text-base">
                             {dateStart} - {dateEnd}
                         </div>
-                        <ul class="flex flex-col gap-[25px] my-[25px] text-text pl-8">
+                        <ul class="flex flex-col gap-[25px] my-[25px] text-text md:pl-8 text-sm sm:text-base">
                             {description.map((desc) => {
                                 return <li set:html={highlightKeywords(desc, keywords)} />;
                             })}
                         </ul>
-                        <div class="flex gap-[15px] flex-wrap">
+                        <div class="flex gap-2 gap-y-3 flex-wrap">
                             {skills.map(({ id, name }) => {
                                 return (
                                     <div class="flex gap-[5px] border border-secondary/35 cursor-default select-none rounded-2xl px-[10px] py-1 text-sm">
@@ -83,5 +83,21 @@ const highlightKeywords = (text: string, keywords: string[]): string => {
     ul li span.highlight {
         color: #b47eff;
         font-weight: bold;
+    }
+    @media screen and (max-width: 768px) {
+        .job-title::before {
+            left: -42px;
+        }
+        ul li::before {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 640px) {
+        .job-title::before {
+            left: -28px;
+            width: 14px;
+            height: 14px;
+            top: 20px;
+        }
     }
 </style>
