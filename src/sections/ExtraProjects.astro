@@ -9,7 +9,7 @@ import { PROJECTS } from "../data/extraProjects";
         {
             PROJECTS.map(({ id, icon, name, links, description, keywords, skills }) => {
                 return (
-                    <div class="bg-secondary/5 rounded-xl border border-secondary/35">
+                    <div class="bg-secondary/5 rounded-xl border border-secondary/35 shadow-lg">
                         <img class="w-full rounded-t-xl" src={`/img/${id}.webp`} alt={`${name} Thumbnail`} />
                         <div class="p-[15px] flex flex-col gap-6">
                             <div class="flex gap-4 items-center">
