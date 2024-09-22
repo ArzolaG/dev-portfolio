@@ -58,4 +58,22 @@ import { TOOLS } from "../data/tools";
             gap: 30px;
         }
     }
+    @media screen and (max-width: 416px) {
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .grid div {
+            width: 100%;
+            min-width: 120px;
+        }
+    }
+    @media screen and (max-width: 325px) {
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+    }
 </style>
