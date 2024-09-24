@@ -9,7 +9,7 @@ import { TOOLS } from "../data/tools";
         {
             SKILLS.map(({ id, name }) => {
                 return (
-                    <div class=" 2xl:w-[120px] p-3 pt-4 bg-secondary/5 border border-secondary/50 flex flex-col items-center gap-3 rounded-xl shadow-lg">
+                    <div class=" 2xl:w-[120px] p-3 pt-4 bg-secondary/5 border border-secondary/50 hover:border-secondary/80 cursor-default flex flex-col items-center gap-3 rounded-xl select-none skill">
                         <img class="w-[60px] xl:w-[45px] 2xl:w-[60px]" src={`/svg/${id}.svg`} alt={`${name} Icon`} />
                         <span class="text-sm sm:text-base xl:text-sm 2xl:text-base">{name}</span>
                     </div>
@@ -17,12 +17,12 @@ import { TOOLS } from "../data/tools";
             })
         }
     </div>
-    <h3 class="text-left xl:text-right font-bold mt-16 text-2xl">Tools & Platforms</h3>
+    <h3 class="text-left xl:text-right font-bold mt-16 text-lg sm:text-2xl">Tools & Platforms</h3>
     <div class="skills-grid grid gap-5 sm:gap-7 items-center xl:justify-end mt-10">
         {
             TOOLS.map(({ id, name }) => {
                 return (
-                    <div class=" 2xl:w-[120px] p-3 pt-4 bg-secondary/5 border border-secondary/50 flex flex-col items-center gap-3 rounded-xl shadow-lg">
+                    <div class=" 2xl:w-[120px] p-3 pt-4 bg-secondary/5 border border-secondary/50 hover:border-secondary/80 cursor-default flex flex-col items-center gap-3 rounded-xl select-none skill">
                         <img class="w-[60px] xl:w-[45px] 2xl:w-[60px]" src={`/svg/${id}.svg`} alt={`${name} Icon`} />
                         <span class="text-sm sm:text-base xl:text-sm 2xl:text-base">{name}</span>
                     </div>
@@ -35,6 +35,13 @@ import { TOOLS } from "../data/tools";
 <style>
     .grid {
         grid-template-columns: repeat(3, 120px);
+    }
+    .skill {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
+        transition: 0.3s all ease;
+    }
+    .skill:hover {
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 3px 12px;
     }
     @media screen and (max-width: 1536px) {
         .grid {

@@ -7,6 +7,9 @@ interface Props {
 const { content, url } = Astro.props;
 ---
 
-<a href={url} class="text-base sm:text-lg xl:text-xl bg-accent px-5 py-[10px] sm:py-3 rounded-xl">
+<a
+    href={url}
+    class="text-base sm:text-lg border border-transparent xl:text-xl bg-accent px-5 py-[10px] sm:py-3 rounded-xl transition-all duration-300 hover:bg-[#4c2b7a] hover:border hover:border-primary/80"
+>
     {content}
 </a>

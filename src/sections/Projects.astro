@@ -21,7 +21,7 @@ const highlightKeywords = (text: string, keywords: string[]): string => {
                 return (
                     <div class={`${index % 2 !== 0 ? "xl:flex-row-reverse" : "xl:flex-row"} flex flex-col items-center`}>
                         <div
-                            class={`${index % 2 !== 0 ? "xl:pl-[12%]" : "xl:pr-[12%]"}w-full xl:w-3/5 p-4 sm:p-[35px]  bg-secondary/5 rounded-t-xl  xl:rounded-xl border border-secondary/35 flex flex-col gap-6 `}
+                            class={`${index % 2 !== 0 ? "xl:pl-[12%]" : "xl:pr-[12%]"} w-full xl:w-3/5 p-4 sm:p-[35px]  bg-secondary/5 rounded-t-xl  xl:rounded-xl border border-secondary/35 flex flex-col gap-6 `}
                         >
                             <div class="flex gap-3 md:gap-4 items-center flex-wrap">
                                 <img class="size-5 md:size-[30px]" src={`/svg/${icon}.svg`} alt={`${icon} Icon`} />
@@ -32,7 +32,11 @@ const highlightKeywords = (text: string, keywords: string[]): string => {
                                 <div class="flex gap-3">
                                     {links.map(({ id, name, url }) => {
                                         return (
-                                            <a href={url} class=" bg-primary/20 p-[6px] rounded-xl">
+                                            <a
+                                                href={url}
+                                                target="_blank"
+                                                class=" bg-primary/20 p-[6px] rounded-xl border border-transparent transition-all duration-300 hover:border-primary/80"
+                                            >
                                                 <img class="w-[18px] sm:w-[22px]" src={`/svg/${id}.svg`} alt={`${name} Icon`} />
                                             </a>
                                         );

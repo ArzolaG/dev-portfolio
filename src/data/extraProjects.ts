@@ -9,7 +9,7 @@ export const PROJECTS:Project[] =[
             {
                 id:"open",
                 name:"Preview",
-                url:"test"
+                url:"https://bamboofloreriatijuana.com/"
             }   
         ],
         description:['An elegant and user-friendly e-commerce site designed for a flower shop, offering a variety of floral arrangements. '],
@@ -45,12 +45,12 @@ export const PROJECTS:Project[] =[
             {
                 id:"github",
                 name:"GitHub",
-                url:"test"
+                url:"https://github.com/ArzolaG/Skateboard"
             },
             {
                 id:"open",
                 name:"Preview",
-                url:"test"
+                url:"https://arzolag.github.io/Skateboard/"
             }
         ],
         description:['A clean, minimal landing page for a skate shop, showcasing the latest products with easy navigation and a stylish design.'],

@@ -2,7 +2,7 @@
 import Button from "../components/Button.astro";
 ---
 
-<header class="fixed backdrop-blur-lg z-50 transparent border-b border-transparent w-full mt-10">
+<header class="fixed backdrop-blur-lg z-50 transparent border-b border-transparent w-full lg:mt-10">
     <section class="flex justify-between items-center w-full max-w-[1515px] mx-auto mt-0">
         <div id="menu-toggle" class="lg:hidden">
             <div class="bar-1"></div>
@@ -30,10 +30,14 @@ import Button from "../components/Button.astro";
     }
     ul li {
         opacity: 0.6;
+        transition: 0.3s all ease;
     }
-    ul li:nth-child(1) {
+    ul li:hover {
         opacity: 1;
     }
+    /* ul li:nth-child(1) {
+        opacity: 1;
+    } */
     header {
         transition: 0.3s all ease;
         padding: 16px;
@@ -76,6 +80,9 @@ import Button from "../components/Button.astro";
     @media screen and (max-width: 1024px) {
         #menu-toggle {
             display: flex;
+        }
+        header {
+            padding: 20px 0px;
         }
         .menu {
             transition: 0.5s all ease;
