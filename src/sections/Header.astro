@@ -106,30 +106,40 @@ import Button from "../components/Button.astro";
             left: 0;
         }
     }
+    .no-transition {
+        transition: none !important;
+    }
 </style>
 
 <script>
-    window.addEventListener("scroll", () => {
-        const header = document.querySelector("header") as HTMLElement;
+    const header = document.querySelector("header") as HTMLElement;
 
-        // Si el scroll es mayor a 50px, agrega la clase 'scrolled'
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    });
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = "rgba(49, 43, 58, 0.9)";
+        header.style.borderColor = "rgba(214, 191, 246, 0.35)";
+        header.style.marginTop = "0";
+        header.style.transition = "none";
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
 
-    const toggleButton = document.querySelector("#menu-toggle");
-    const navMenu = document.querySelector(".menu");
-    toggleButton?.addEventListener("click", () => {
-        toggleButton.classList.toggle("change");
-        navMenu?.classList.toggle("left-0");
-    });
-    navMenu?.querySelectorAll("ul li a")?.forEach((element) => {
-        element.addEventListener("click", () => {
-            toggleButton?.classList.remove("change");
-            navMenu?.classList.remove("left-0");
+        const toggleButton = document.querySelector("#menu-toggle");
+        const navMenu = document.querySelector(".menu");
+        toggleButton?.addEventListener("click", () => {
+            toggleButton.classList.toggle("change");
+            navMenu?.classList.toggle("left-0");
+        });
+        navMenu?.querySelectorAll("ul li a")?.forEach((element) => {
+            element.addEventListener("click", () => {
+                toggleButton?.classList.remove("change");
+                navMenu?.classList.remove("left-0");
+            });
         });
     });
 </script>

@@ -59,9 +59,12 @@ const highlightKeywords = (text: string, keywords: string[]): string => {
                                 })}
                             </div>
                         </div>
-                        <div class={`${index % 2 !== 0 ? "left-0 shadow-right" : "right-0 shadow-left"} w-full xl:w-[50%] xl:absolute`}>
+                        <div
+                            class={`${index % 2 !== 0 ? "left-0 shadow-right" : "right-0 shadow-left"} w-full xl:w-[50%] xl:absolute overflow-hidden rounded-b-xl  xl:rounded-xl border border-t-0  xl:border border-secondary/50 xl:border-secondary project-cover`}
+                        >
                             <img
-                                class=" max-h-[400px] xl:h-full object-cover rounded-b-xl  xl:rounded-xl border border-t-0  xl:border border-secondary/50 xl:border-secondary w-full"
+                                class=" max-h-[400px] xl:h-full object-cover w-full transition-all duration-200 hover:scale-105 
+                                "
                                 src={`/img/${id}.webp`}
                                 alt={`${name} Thumbnail`}
                             />
@@ -81,5 +84,21 @@ const highlightKeywords = (text: string, keywords: string[]): string => {
     }
     .project-name {
         position: relative;
+    }
+    .project-cover::after {
+        transition: 0.2s background-color ease;
+    }
+    .project-cover::after {
+        content: "";
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background-color: rgba(46, 17, 87, 0.3);
+        pointer-events: none;
+    }
+    .project-cover:hover::after {
+        background-color: rgba(46, 17, 87, 0.1);
     }
 </style>
