@@ -35,9 +35,9 @@ import Button from "../components/Button.astro";
     ul li:hover {
         opacity: 1;
     }
-    /* ul li:nth-child(1) {
+    ul li.active {
         opacity: 1;
-    } */
+    }
     header {
         transition: 0.3s all ease;
         padding: 16px;
@@ -113,13 +113,17 @@ import Button from "../components/Button.astro";
 
 <script>
     const header = document.querySelector("header") as HTMLElement;
+    const menuItems = document.querySelectorAll("ul li a");
+    const sections = document.querySelectorAll("section");
 
     if (window.scrollY > 50) {
-        header.style.backgroundColor = "rgba(49, 43, 58, 0.9)";
-        header.style.borderColor = "rgba(214, 191, 246, 0.35)";
-        header.style.marginTop = "0";
+        header.classList.add("scrolled");
         header.style.transition = "none";
+    } else {
+        header.classList.remove("scrolled");
+        header.style.transition = ".3s all ease";
     }
+
     document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 50) {
@@ -127,6 +131,22 @@ import Button from "../components/Button.astro";
             } else {
                 header.classList.remove("scrolled");
             }
+
+            menuItems.forEach((item) => {
+                const itemValue = item.getAttribute("href");
+                const section = document.querySelector(`section${itemValue}`);
+
+                const observer = new window.IntersectionObserver(([entry]) => {
+                    if (entry.isIntersecting) {
+                        item.parentElement?.classList.add("active");
+                    } else {
+                        item.parentElement?.classList.remove("active");
+                    }
+                });
+                if (section) {
+                    observer.observe(section);
+                }
+            });
         });
 
         const toggleButton = document.querySelector("#menu-toggle");
@@ -139,6 +159,18 @@ import Button from "../components/Button.astro";
             element.addEventListener("click", () => {
                 toggleButton?.classList.remove("change");
                 navMenu?.classList.remove("left-0");
+            });
+        });
+
+        menuItems.forEach((item) => {
+            item.addEventListener("click", () => {
+                console.log("before removing active class");
+                menuItems.forEach((item) => {
+                    item.parentElement?.classList.remove("active");
+                });
+
+                console.log("after removing active class and before adding active class");
+                item.parentElement?.classList.add("active");
             });
         });
     });
