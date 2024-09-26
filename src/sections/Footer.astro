@@ -1,3 +1,7 @@
+---
+const fullYear = new Date().getFullYear();
+---
+
 <section>
     <div
         class="flex flex-col lg:flex-row lg:justify-between items-center p-3 sm:p-5 bg-secondary/5 rounded-xl border border-secondary/35 mb-10 shadow-lg"
@@ -5,18 +9,18 @@
         <p class="w-full text-center lg:text-left">
             Built and designed by <span class="text-primary">Luis Arzola</span> using <span class="text-primary"
                 >Astro, TypeScript and Tailwind.</span
-            > © 2024
+            > © {fullYear}
         </p>
         <div class="flex gap-3 justify-center mt-5 lg:mt-0">
             <a
                 href="https://github.com/ArzolaG/dev-portfolio"
-                class="bg-primary/20 p-[8px] rounded-xl border border-transparent transition-all duration-300 hover:border-primary/80"
+                class="bg-primary/20 p-[8px] rounded-xl border border-transparent transition-all duration-300 hover:border-primary/80 select-none"
             >
                 <img class="w-[22px]" src="/svg/github.svg" alt="Github Icon" />
             </a>
             <a
                 href="https://www.figma.com/design/IDpZPZJn7bnbrXWJtXJOP5/Portfolio?node-id=0-1&t=ZkG5KK5pHVASftf8-1"
-                class="bg-primary/20 p-[8px] rounded-xl border border-transparent transition-all duration-300 hover:border-primary/80"
+                class="bg-primary/20 p-[8px] rounded-xl border border-transparent transition-all duration-300 hover:border-primary/80 select-none"
             >
                 <img class="w-[22px]" src="/svg/figmawhite.svg" alt="Figma Icon" />
             </a>

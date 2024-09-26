@@ -19,7 +19,7 @@ import Button from "../components/Button.astro";
                 </ul>
             </nav>
         </div>
-        <Button content="Download Resume" url="#" />
+        <Button content="Download Resume" url="/resume.pdf" download="Luis Arzola Resume" />
     </section>
 </header>
 
@@ -114,7 +114,6 @@ import Button from "../components/Button.astro";
 <script>
     const header = document.querySelector("header") as HTMLElement;
     const menuItems = document.querySelectorAll("ul li a");
-    const sections = document.querySelectorAll("section");
 
     if (window.scrollY > 50) {
         header.classList.add("scrolled");
@@ -130,6 +129,7 @@ import Button from "../components/Button.astro";
                 header.classList.add("scrolled");
             } else {
                 header.classList.remove("scrolled");
+                header.style.transition = ".3s all ease";
             }
 
             menuItems.forEach((item) => {
