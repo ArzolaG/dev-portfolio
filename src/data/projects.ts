@@ -35,7 +35,7 @@ export const PROJECTS:Project[] =[
             },
             {
                 id:"tailwind",
-                name:"tailwind"
+                name:"Tailwind"
             },
         ]
     },
