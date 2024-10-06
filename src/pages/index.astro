@@ -8,6 +8,7 @@ import Contact from "../sections/Contact.astro";
 import Footer from "../sections/Footer.astro";
 import Skills from "../sections/Skills.astro";
 import ExtraProjects from "../sections/ExtraProjects.astro";
+import Header from "../sections/Header.astro";
 ---
 
 <Layout
@@ -15,6 +16,7 @@ import ExtraProjects from "../sections/ExtraProjects.astro";
     description="Welcome to the portfolio of Luis Arzola, a Full-Stack Developer with experience in JavaScript, TypeScript, React, HTML, CSS, and more."
     image="/img/portfolio-thumbnail.webp"
 >
+    <Header />
     <Hero />
     <section class="flex flex-col xl:flex-row justify-between sm:gap-[20px] 2xl:gap-[100px] mt-0">
         <Experience />
