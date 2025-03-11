@@ -3,10 +3,37 @@ import type {Experience} from "../types/Experience";
 export const EXPERIENCE:Experience[] = [
    {
     id:"1",
+    position:"Web UI Developer",
+    company:"SailPoint",
+    dateStart:"March 2025",
+    dateEnd:"Present",
+    description:['Focusing on building intuitive and scalable user interfaces with modern web technologies to enhance identity security solutions.'],
+    keywords:["scalable","web", "security"],
+    skills:[
+        {
+            id:"react",
+            name:"React"
+        },
+        {
+            id:"typescript",
+            name:"TypeScript"
+        },
+        {
+            id:"css",
+            name:"CSS"
+        },
+        {
+            id:"tailwind",
+            name:"tailwindCSS"
+        },
+    ]
+   },
+   {
+    id:"2",
     position:"Web Developer",
     company:"Plumber Marketing USA",
     dateStart:"December 2023",
-    dateEnd:"Present",
+    dateEnd:"February 2025",
     description:['Led the development of highly customized WordPress websites using advanced CSS, HTML, and JavaScript, enhancing site functionality and user experience.', 'Collaborated with cross-functional teams based in the USA to implement innovative solutions that meet client needs and industry standards.'],
     keywords:["WordPress","CSS, HTML, and JavaScript", "USA"],
     skills:[
@@ -33,7 +60,7 @@ export const EXPERIENCE:Experience[] = [
     ]
    },
    {
-    id:"2",
+    id:"3",
     position:"Full-Stack Engineer",
     company:"Freelance",
     dateStart:"August 2018",
@@ -76,7 +103,7 @@ export const EXPERIENCE:Experience[] = [
     ]
    },
    {
-    id:"3",
+    id:"4",
     position:"Web Developer",
     company:"DUDE Agency",
     dateStart:"February 2021",
